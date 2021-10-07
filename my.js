@@ -94,17 +94,95 @@
 // }
 // console.log(checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]))
 
-function hello(name) {
-  debugger
-  let arr = name.split('')
-  if(name = undefined) return 'Hello, World!', "returns 'Hello, World!' when name is not given"
-  else if (name =='') return 'Hello, World!', "returns 'Hello, World!' when name is an empty String"
-  //else if(name[0].toUpperCase() == name[0]) return `Hello, ${name}!`, `returns 'Hello, ${name}!' when given '${name}'`
-  else if(arr[0].toUpperCase() !== arr[0]) {
-    arr.splice(0,0,arr[0].toUpperCase())
-    arr.splice(1,1)
-    let arr2 = arr.join('')
-   return String(`Hello, ${arr2}!`)
-  } 
-}
-console.log(hello('johN'))
+// function hello(name) {
+//   debugger
+//   let arr = name.split('')
+//   if(name = undefined) return 'Hello, World!', "returns 'Hello, World!' when name is not given"
+//   else if (name =='') return 'Hello, World!', "returns 'Hello, World!' when name is an empty String"
+//   //else if(name[0].toUpperCase() == name[0]) return `Hello, ${name}!`, `returns 'Hello, ${name}!' when given '${name}'`
+//   else if(arr[0].toUpperCase() !== arr[0]) {
+//     arr.splice(0,0,arr[0].toUpperCase())
+//     arr.splice(1,1)
+//     let arr2 = arr.join('')
+//    return String(`Hello, ${arr2}!`)
+//   } 
+// }
+// console.log(hello('johN'))
+
+// function twoHighest(arr) {
+//   debugger
+//   let resultArr =[];
+//   function findBiggestNumber(){
+//     debugger
+//     let idbiggestNumber = 0;
+//     for(i=0; i<arr.length; i++){
+//       if(arr[i]>arr[idbiggestNumber]) idbiggestNumber = i 
+//     }
+  
+//     return idbiggestNumber
+//   }
+//    let id = findBiggestNumber(arr)
+//    let newArr = arr.splice(id, 1)
+//    resultArr=resultArr.concat(newArr);
+//     id = findBiggestNumber(arr)
+//     newArr = arr.splice(id, 1)
+//    if(resultArr[0] == newArr[0]){
+//      id = findBiggestNumber(arr)
+//      newArr = arr.splice(id, 1)
+//     resultArr= resultArr.concat(newArr)
+//     return resultArr
+//    }else{
+//     resultArr=resultArr.concat(newArr)
+//     return resultArr
+//    }
+// }
+// function billboard(name, price = 30){
+//  let count =0;
+// for (let i=0; i<name.length; i++){
+//   count+=price
+// }
+//   return count
+// } 
+
+// console.log(billboard('Ural Islamov'))
+// function solution(a, b){
+//   if(a.length >b.length){
+//     return b+a+b
+//   }else{
+//     return a+b+a
+//   }
+// }
+// console.log(solution('45', '1'));
+// function lovefunc(flower1, flower2){
+//  return flower1==flower2 ?  false:true
+// }
+// console.log(lovefunc(620,602))
+// function findMultiples(integer, limit) {
+//   let arr =[]
+//   for (let i=1;i<=(limit/integer);i++){
+//     arr.push(integer*i)
+//   }
+//   return arr
+// }
+// console.log(findMultiples(4, 27))
+// function generateRange(min, max, step){
+//   let arr =[]
+//   let num = min
+// do {
+//   arr.push(num)
+//   num+=step
+//  }while (num <=max)
+//  return arr
+// }
+// console.log(generateRange(1,10,3))
+// function narcissistic(value) {
+//   debugger
+//   let sum = 0;
+//   let b = value.toString();
+//   for(let i=0; i<b.length; i++){
+//     sum+=Math.pow(b[i], b.length)
+//   }
+//   if(sum == value) return true
+//   else return false
+// }
+// console.log(narcissistic(371))
