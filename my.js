@@ -186,3 +186,60 @@
 //   else return false
 // }
 // console.log(narcissistic(371))
+function lastSurvivors(str) {
+  let arr_en = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  let str1 = str.split('')
+  let i =0
+  for (i=0;i< str1.length;i){
+   //debugger
+      let simb = str1.splice(i,1);
+      if(str1.includes(simb[0])){
+          let id = arr_en.indexOf(simb[0])
+          let id2 =str1.indexOf(simb[0])
+          if(simb[0] =='z'){
+             str1.splice(id2,1,arr_en[0])
+                   }
+          else str1.splice(id2,1,arr_en[id+1])
+            }
+      else{
+          if(str1.includes(str[i-1])){
+            i--}
+          else {
+             str1.splice(i,0,simb[0])
+             i++} 
+           }
+      }
+      return str1.join('')
+}
+console.log(lastSurvivors('xsdlafqpcmjytoikojsecamgdkehrqqgfknlhoudqygkbxftivfbpxhxtqgpkvsrfflpgrlhkbfnyftwkdebwfidmpauoteahyh'))
+
+// function remove(s){
+//  debugger
+//   let arr =[]
+//   let ns = s.split('')
+//   for(let i=0; i<s.length; i++){
+//     if(ns[ns.length-1] == '!'){
+//       ns.splice(ns.length-1, 1)
+//       arr = ns
+//     }
+//     else return ns.join('')
+//   }
+//   return ns.join('')
+  
+// }
+// console.log(remove("zpc!!!!!"))
+
+// function noSpace(x){
+//   let r = x.replace(/\s/g, '')
+//  return r
+// }
+// console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'))
+
+
+// function well(x){
+//   debugger
+//  let arr = x.filter(m=>m=='good')
+//  if(arr.length <=2) return 'Publish!'
+//   else return 'I smell a series!'
+// }
+// well(['good', 'bad', 'bad', 'bad', 'bad'])
