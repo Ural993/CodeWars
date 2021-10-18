@@ -278,14 +278,23 @@
 // }
 // well(['good', 'bad', 'bad', 'bad', 'bad'])
 
-var isSquare = function(arr){
-  debugger
-  let number =0;
-  if(arr.length == 0) return undefined
-  for(let i=0; i< arr.length; i++){
-    if(Number.isInteger(Math.sqrt(arr[i]))) number++
+// var isSquare = function(arr){
+//   debugger
+//   let number =0;
+//   if(arr.length == 0) return undefined
+//   for(let i=0; i< arr.length; i++){
+//     if(Number.isInteger(Math.sqrt(arr[i]))) number++
+//   }
+// if(number == arr.length) return true
+//   else return false
+// }
+// console.log(isSquare([1,4,9,16,24]))
+
+function findOdd(A) {
+  for(let i=0; i<A.length;i++){
+   let arr =  A.filter(n => n == A[i])
+   if(arr.length%2 != 0) return A[i]
   }
-if(number == arr.length) return true
-  else return false
+
 }
-console.log(isSquare([1,4,9,16,24]))
+console.log(findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]))
