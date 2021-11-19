@@ -290,11 +290,119 @@
 // }
 // console.log(isSquare([1,4,9,16,24]))
 
-function findOdd(A) {
-  for(let i=0; i<A.length;i++){
-   let arr =  A.filter(n => n == A[i])
-   if(arr.length%2 != 0) return A[i]
+// function findOdd(A) {
+//   for(let i=0; i<A.length;i++){
+//    let arr =  A.filter(n => n == A[i])
+//    if(arr.length%2 != 0) return A[i]
+//   }
+
+// }
+// console.log(findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]))
+
+//    let state = {
+//         dialogs: [
+//             { name: 'Vovs', id: 1 },
+//             { name: 'Petr', id: 2 },
+//             { name: 'Sasha', id: 3 },
+//             { name: 'Dimich', id: 4 }
+//         ],
+//         messages: [
+//             { message: 'Hi, how are yoy?' },
+//             { message: 'Whre are you?' },
+//             { message: 'I am fine' }
+//         ]
+//     }
+   
+
+
+// let stateCopy = {...state, dialogs: [...state.dialogs, { name:'sdfs'}]}
+//  // stateCopy = {...state}
+//  // stateCopy.dialogs = {...state.dialogs}
+//  // stateCopy.dialogs[0] = {...state.dialogs[0]}
+//  // stateCopy.dialogs[0].name = 'Ural'
+
+
+
+// console.log(state.dialogs)
+// console.log(stateCopy.dialogs)
+
+
+// const DATA = {
+//     name: 'vlad',
+//     surname: 'Kudashov',
+//     passport: {
+//         serial: {
+//           b:'ural'
+//         }
+//     }
+// }
+
+// const DATAcopy = {...DATA, passport: {...DATA.passport, serial: {...DATA.passport.serial, b:"akjsdh"}}}
+
+// console.log(DATAcopy.passport.serial.b);
+// console.log(DATA.passport.serial.b);
+
+// var isSquare = function(n){
+//   if (n<0) return  `${n}: Negative numbers cannot be square numbers`
+//   else if (Number.isInteger(Math.sqrt(n))) return `${n} is a square number (${Math.sqrt(n)} * ${Math.sqrt(n)})`
+//   else return `${n} is not a square number`
+// }
+// console.log(isSquare(8))
+
+// function SplitIntoWords(string){
+//     let arr = string.toLowerCase().split(' ')
+//     return arr.filter(w => w !== '!' && w !== '-' && w !== '.')
+//         .map(w => w
+//             .replace('.', '')
+//             .replace('!', '')
+//             .replace('-', ''))
+
+// }
+// console.log(SplitIntoWords('Helo -world!'))
+
+// const students = [
+//     {
+//         name: "Bob",
+//         age: 22,
+//         isMarried: true,
+//         scores: 85
+//     },
+//     {
+//         name: "Alex",
+//         age: 21,
+//         isMarried: true,
+//         scores: 89
+//     },
+//     {
+//         name: "Nick",
+//         age: 20,
+//         isMarried: false,
+//         scores: 120
+//     },
+//     {
+//         name: "John",
+//         age: 19,
+//         isMarried: false,
+//         scores: 100
+//     }
+// ];
+
+// let arr = students.map(st => ({name: st.name}))
+// console.log(arr)
+
+function rotate(str){
+ // debugger
+  let leng = str.length
+   let arr =[]
+  let word = str
+  for (let i=0; i<leng;i++){
+    let letter = word.charAt(0)
+    word = word.slice(1, leng)
+    word = word.padEnd(leng, letter)
+    arr.push(word)
   }
+  return arr
 
 }
-console.log(findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]))
+
+//console.log(rotate('Hello'))
